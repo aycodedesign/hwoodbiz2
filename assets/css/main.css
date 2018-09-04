@@ -1107,14 +1107,7 @@ input[type="button"],
 button,
 .button {
   background-color: transparent;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
-  color: #ffffff !important; }
-  input[type="submit"]:hover,
-  input[type="reset"]:hover,
-  input[type="button"]:hover,
-  button:hover,
-  .button:hover {
-    background-color: rgba(255, 255, 255, 0.075); }
+  font-size: .4em; }
   input[type="submit"]:active,
   input[type="reset"]:active,
   input[type="button"]:active,
@@ -1592,8 +1585,10 @@ ul.icons {
       padding-right: 0 !important; }
 
 /* Section/Article */
-section.special, article.special {
-  text-align: center; }
+section, article {
+  clear: both; }
+  section.special, article.special {
+    text-align: center; }
 
 header.major {
   margin-bottom: 3em; }
@@ -1706,7 +1701,7 @@ table.alt tbody tr td {
   list-style: none; }
   .features li {
     margin-top: 3em;
-    padding: 0 4em; }
+    padding: 2em 3em; }
     .features li h3 {
       margin: 0; }
     .features li p {
@@ -1871,6 +1866,10 @@ img {
   max-width: 100%;
   height: auto; }
 
+.fancybox-button {
+  padding: 0 !important;
+  border: none !important; }
+
 /* 
 This is the starting grid for each video with thumbnails 4 across for the largest screen size.
 It's important to use percentages or there may be gaps on the right side of the page. 
@@ -1888,6 +1887,17 @@ It's important to use percentages or there may be gaps on the right side of the 
  These keep the height of each video thumbnail consistent between YouTube and Vimeo.
  Each can have thumbnail sizes that vary by 1px and are likely break your layout. 
  */
+.video figure {
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden; }
+  .video figure .video figure a {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    line-height: 0; }
+
 /*VIDEO HOVER EFFECTS*/
 .grid {
   position: relative;
@@ -1904,9 +1914,9 @@ It's important to use percentages or there may be gaps on the right side of the 
     min-width: 320px;
     max-width: 480px;
     max-height: 360px;
-    width: 25%;
+    width: 100%;
     height: auto;
-    background: #202425;
+    background: #704214;
     text-align: center;
     cursor: pointer; }
     .grid figure img {
@@ -1961,8 +1971,8 @@ figure.effect-moses p {
   padding: 20px;
   width: 50%;
   height: 50%;
-  border: 2px solid white;
-  color: white !important; }
+  border: 2px solid #ffffff;
+  color: #ffffff !important; }
 figure.effect-moses h2 {
   padding: 20px;
   width: 50%;
@@ -2263,14 +2273,7 @@ figure.effect-moses:hover img {
   #main button,
   #main .button {
     background-color: transparent;
-    box-shadow: inset 0 0 0 1px #dddddd;
-    color: #636363 !important; }
-    #main input[type="submit"]:hover,
-    #main input[type="reset"]:hover,
-    #main input[type="button"]:hover,
-    #main button:hover,
-    #main .button:hover {
-      background-color: rgba(222, 222, 222, 0.25); }
+    font-size: .4em; }
     #main input[type="submit"]:active,
     #main input[type="reset"]:active,
     #main input[type="button"]:active,
@@ -2460,6 +2463,8 @@ figure.effect-moses:hover img {
   #footer > * {
     width: calc(50% - 2em);
     margin-left: 2em; }
+    #footer > * a:hover {
+      text-decoration: none; }
   #footer .copyright {
     width: 100%;
     margin: 2.5em 0 2em 0;
