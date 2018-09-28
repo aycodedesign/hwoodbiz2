@@ -2,7 +2,8 @@
 
 	body {
 		background-color: _palette(bg);
-		color: _palette(fg);
+		color: _palette(fg-bold);
+
 	}
 
 	body, input, select, textarea {
@@ -48,6 +49,8 @@
 
 	p {
 		margin: 0 0 _size(element-margin) 0;
+		color: _palette(fg-bold) !important;
+
 
 		&.content {
 			-moz-columns: 20em 2;
@@ -67,6 +70,8 @@
 		line-height: 1.5;
 		margin: 0 0 (_size(element-margin) * 0.35) 0;
 		letter-spacing: _font(letter-spacing);
+		color: _palette(fg-bold) !important;
+
 
 		a {
 			color: inherit;

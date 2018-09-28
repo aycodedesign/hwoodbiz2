@@ -1,5 +1,15 @@
 /* Section/Article */
 
+section {
+	height: auto;
+	// background-color: _palette(bg-alt);
+	background-color: _palette(bg1);
+	// #story {
+	// 	background-color: _palette(blue4) !important;
+	// }
+
+}
+
 	section, article {
 		clear: both;
 		&.special {
@@ -85,7 +95,7 @@
 			&.major {
 				h2 {
 					&:after {
-						background-color: _palette($p, border);
+						// background-color: _palette($p, border);
 
 						@if $p == 'invert' {
 							@include vendor('background-image', 'linear-gradient(90deg, #{_palette(accent1)}, #{_palette(accent3)}, #{_palette(accent5)})');

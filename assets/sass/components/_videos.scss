@@ -44,7 +44,8 @@ It's important to use percentages or there may be gaps on the right side of the 
 
 .video figure {
   height: 0;
-  padding-bottom: 56.25%;
+  // padding-bottom: 56.25%;
+
   overflow: hidden;
   .video figure a {
     display: block;
@@ -83,7 +84,7 @@ It's important to use percentages or there may be gaps on the right side of the 
 .grid {
   position: relative;
   clear: both;
-  margin: 0 auto; // padding: 1em 0 4em;
+  margin: 0 auto; 
   max-width: 1000px;
   list-style: none;
   text-align: center;
@@ -91,23 +92,19 @@ It's important to use percentages or there may be gaps on the right side of the 
     position: relative;
     float: left;
     overflow: hidden;
-    margin: 10px 1%;
+    margin: 0px 1% 50px;
     min-width: 320px;
     max-width: 480px;
     max-height: 360px;
     width: 100%;
     height: auto;
-    // background: #202425;
     background: #704214;
-
     text-align: center;
     cursor: pointer;
     img {
       position: relative;
       display: block;
       width: 100%;
-      // min-height: 100%;
-      // max-width: 100%;
       opacity: 0.8;
     }
     figcaption {
@@ -147,7 +144,8 @@ It's important to use percentages or there may be gaps on the right side of the 
     p {
       margin: 0;
       letter-spacing: .5px;
-      font-size: 53%;
+      // font-size: 53%;
+      font-size: 1em;
     }
   }
 }
