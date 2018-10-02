@@ -2,12 +2,7 @@
 
 section {
 	height: auto;
-	// background-color: _palette(bg-alt);
-	background-color: _palette(bg1);
-	// #story {
-	// 	background-color: _palette(blue4) !important;
-	// }
-
+	margin: 0 auto;
 }
 
 	section, article {
@@ -63,7 +58,7 @@ section {
 		}
 	}
 
-	@include breakpoint('<=small') {
+	@include breakpoint('<=xsmall') {
 		header {
 			&.major {
 				margin-bottom: 0;

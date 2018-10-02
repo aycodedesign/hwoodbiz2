@@ -67,8 +67,13 @@ body {
   -ms-overflow-style: scrollbar; }
 
 @media screen and (max-width: 480px) {
-  html, body {
-    min-width: 320px; } }
+  body .hero-image {
+    background-image: url(../../../images/hero.png);
+    height: auto !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; } }
 html {
   box-sizing: border-box; }
 
@@ -76,11 +81,18 @@ html {
   box-sizing: inherit; }
 
 body {
-  background-color: #935d8c;
+  background-color: rgba(28, 33, 37, 0.9);
   background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #1C2125 15%, #2E394E 85%);
   background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #1C2125 15%, #2E394E 85%);
   background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #1C2125 15%, #2E394E 85%);
   background-image: url("images/overlay.png"), linear-gradient(45deg, #1C2125 15%, #2E394E 85%); }
+  body .hero-image {
+    background-image: url(../../../images/hero.png);
+    height: 900px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; }
   body.is-preload *, body.is-preload *:before, body.is-preload *:after {
     -moz-animation: none !important;
     -webkit-animation: none !important;
@@ -92,10 +104,6 @@ body {
     transition: none !important; }
 
 /* Type */
-body {
-  background-color: #935d8c;
-  color: #ffffff; }
-
 body, input, select, textarea {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-size: 17pt;
@@ -117,10 +125,10 @@ a {
   -ms-transition: color 0.2s ease, border-bottom 0.2s ease;
   transition: color 0.2s ease, border-bottom 0.2s ease;
   text-decoration: none;
-  border-bottom: dotted 1px;
-  color: inherit; }
+  color: #ffffff; }
   a:hover {
-    border-bottom-color: transparent; }
+    border-bottom-color: transparent;
+    border-bottom: 1px dotted #ffffff; }
 
 strong, b {
   font-weight: 400; }
@@ -183,12 +191,6 @@ sup {
   font-size: 0.8em;
   position: relative;
   top: -0.5em; }
-
-blockquote {
-  border-left: solid 4px;
-  font-style: italic;
-  margin: 0 0 2em 0;
-  padding: 0.5em 0 0.5em 2em; }
 
 code {
   border-radius: 8px;
@@ -1152,7 +1154,7 @@ button,
   border-right: none;
   border-top: none;
   border-bottom: none;
-  margin: 0 auto; }
+  margin: 1em auto; }
   .card .card-img-top {
     padding: 10px; }
   .card h4, .card h5 {
@@ -1616,7 +1618,7 @@ ul.icons {
 /* Section/Article */
 section {
   height: auto;
-  background-color: #1C2125; }
+  margin: 0 auto; }
 
 section, article {
   clear: both; }
@@ -1649,7 +1651,7 @@ header.major {
 footer.major {
   margin-top: 3em; }
 
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 480px) {
   header.major {
     margin-bottom: 0; }
     header.major h2 {
@@ -1736,8 +1738,6 @@ table.alt tbody tr td {
       margin: 0; }
     .features li p {
       margin: 0; }
-    .features li:nth-child(1), .features li:nth-child(2), .features li:nth-child(3) {
-      margin-top: 0; }
     .features li > :last-child {
       margin-bottom: 0; }
   @media screen and (max-width: 980px) {
@@ -1745,16 +1745,19 @@ table.alt tbody tr td {
       width: calc(50% - 2em); }
       .features li:nth-child(3) {
         margin-top: 3em; } }
-  @media screen and (max-width: 736px) {
+  @media screen and (max-width: 480px) {
     .features {
       width: 100%;
       margin: 0 0 2em 0; }
       .features li {
         width: 100%;
-        margin-left: 0;
+        margin: 0 auto;
         margin-top: 2em; }
-        .features li:nth-child(2), .features li:nth-child(3) {
-          margin-top: 2em; } }
+        .features li:nth-child(1), .features li:nth-child(2), .features li:nth-child(3), .features li:nth-child(4), .features li:nth-child(5), .features li:nth-child(6) {
+          padding: 2em .25em; }
+      .features a {
+        display: grid;
+        align-items: center; } }
 
 /* Statistics */
 .statistics {
@@ -1904,15 +1907,6 @@ img {
 This is the starting grid for each video with thumbnails 4 across for the largest screen size.
 It's important to use percentages or there may be gaps on the right side of the page. 
 */
-.video {
-  background: #fff;
-  padding-bottom: 20px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-  width: 23%;
-  /* Thumbnails 4 across */
-  margin: 1%;
-  float: left; }
-
 /* 
  These keep the height of each video thumbnail consistent between YouTube and Vimeo.
  Each can have thumbnail sizes that vary by 1px and are likely break your layout. 
@@ -1939,7 +1933,7 @@ It's important to use percentages or there may be gaps on the right side of the 
     position: relative;
     float: left;
     overflow: hidden;
-    margin: 0px 1% 50px;
+    margin: 15px 10px;
     min-width: 320px;
     max-width: 480px;
     max-height: 360px;
@@ -2030,6 +2024,9 @@ figure.effect-moses:hover p {
 figure.effect-moses:hover img {
   opacity: 0.5; }
 
+@media screen and (max-width: 480px) {
+  .grid figure {
+    margin: 25px auto; } }
 /* STAFF HOVER */
 .ih-item {
   -webkit-transition: all 0.35s ease-in-out;
@@ -2093,30 +2090,100 @@ figure.effect-moses:hover img {
       transition: all 0.35s ease-in-out; }
       .ih-item.circle.effect17 .info img {
         width: 25%; }
-    .ih-item.circle.effect17 a:hover .img:before {
-      box-shadow: inset 0 0 0 110px #333333, inset 0 0 0 16px rgba(255, 255, 255, 0.8), 0 1px 2px rgba(0, 0, 0, 0.1);
-      box-shadow: inset 0 0 0 110px rgba(91, 163, 239, 0.5), inset 0 0 0 7px white, 0 1px 2px rgba(0, 0, 0, 0.1); }
-    .ih-item.circle.effect17 a:hover .info {
-      opacity: 1;
-      -webkit-transform: scale(1);
-      -moz-transform: scale(1);
-      -ms-transform: scale(1);
-      -o-transform: scale(1);
-      transform: scale(1); }
+      .ih-item.circle.effect17 .info a:hover .img:before {
+        box-shadow: inset 0 0 0 110px #333333, inset 0 0 0 16px rgba(255, 255, 255, 0.8), 0 1px 2px rgba(0, 0, 0, 0.1);
+        box-shadow: inset 0 0 0 110px rgba(91, 163, 239, 0.5), inset 0 0 0 7px white, 0 1px 2px rgba(0, 0, 0, 0.1); }
+      .ih-item.circle.effect17 .info a:hover .info {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1); }
+  @media screen and (max-width: 736px) {
+    .ih-item {
+      margin: 0 auto; } }
+
+#story {
+  padding-top: 100px !important;
+  padding-bottom: 0 !important; }
+  #story blockquote {
+    font-size: 2em;
+    margin: 0 0 2em 0;
+    font-family: Raleway;
+    color: #9bb2e1;
+    float: left;
+    text-align: right;
+    width: 25%; }
+    #story blockquote b {
+      color: #efa8b0; }
+    #story blockquote #leftquote {
+      font-size: 2em;
+      float: left;
+      margin-top: -60px;
+      font-family: 'Impact', serif; }
+    #story blockquote #rightquote {
+      font-size: 2em;
+      float: right;
+      line-height: 1em;
+      font-family: 'Impact', serif; }
+  #story p {
+    color: #9bb2e1 !important;
+    float: right;
+    text-align: left;
+    width: 70%; }
+    #story p b {
+      color: #efa8b0; }
+    #story p #hbiz {
+      color: #ffffff !important; }
+  @media screen and (max-width: 480px) {
+    #story {
+      padding: 3em 2em 1em 2em ; }
+      #story blockquote {
+        font-size: 1.75em;
+        margin: 20px auto;
+        font-family: Raleway;
+        color: #9bb2e1;
+        text-align: center;
+        width: 100%; }
+        #story blockquote b {
+          color: #efa8b0; }
+        #story blockquote #leftquote {
+          display: none; }
+        #story blockquote #rightquote {
+          display: none; }
+      #story p {
+        color: #9bb2e1 !important;
+        margin: 20px auto;
+        padding: 0 1em;
+        width: 100%; }
+        #story p #hbiz {
+          color: #ffffff !important; } }
 
 /* Header */
 #header {
-  padding: 5em 5em 1em 5em ;
   text-align: center; }
   #header h1 {
     margin: 0 0 0.25em 0; }
   #header p {
     font-size: 1.25em;
-    letter-spacing: -0.025em; }
+    letter-spacing: -0.025em;
+    padding-top: 1em; }
+    #header p a {
+      color: #efa8b0 !important;
+      font-weight: 500; }
   #header.alt {
-    padding: 7em 5em 4em 5em ; }
+    padding: 1em 5em 0.1em 5em ; }
     #header.alt h1 {
-      font-size: 3.25em; }
+      font-size: 4em;
+      font-family: Raleway;
+      text-shadow: 10px 5px 40px #8cc9f0;
+      margin-bottom: 0;
+      font-weight: 200; }
+    #header.alt #biz {
+      font-size: 6em;
+      line-height: .6em;
+      padding-bottom: .25em; }
     #header.alt > * {
       -moz-transition: opacity 3s ease;
       -webkit-transition: opacity 3s ease;
@@ -2167,6 +2234,16 @@ figure.effect-moses:hover img {
   @media screen and (max-width: 480px) {
     #header {
       padding: 3em 1.5em 0.1em 1.5em ; }
+      #header h1 {
+        text-shadow: 10px 5px 10px #8cc9f0; }
+      #header iframe {
+        width: 100%;
+        height: auto; }
+      #header p {
+        padding-top: 2em; }
+        #header p a {
+          color: #efa8b0 !important;
+          font-weight: 500; }
       #header.alt {
         padding: 4em 1.5em 1em 1.5em ; } }
   @media screen and (max-width: 360px) {
@@ -2196,11 +2273,7 @@ figure.effect-moses:hover img {
   left: 0px;
   padding: .4em;
   background-color: #000000;
-  border-top-left-radius: 0.25em;
-  border-top-right-radius: 0.25em;
-  cursor: default;
-  text-align: center;
-  display: inline-block; }
+  cursor: default; }
   #nav input, #nav select, #nav textarea {
     color: #636363; }
   #nav a:hover {
@@ -2216,15 +2289,29 @@ figure.effect-moses:hover img {
     border-color: #dddddd; }
   #nav hr {
     border-bottom-color: #dddddd; }
+  #nav button {
+    border: none;
+    height: 35px; }
+    #nav button .navbar-toggler {
+      padding: 0;
+      margin: 0; }
   #nav #registration {
-    position: absolute;
-    top: .5rem;
-    right: 10px;
+    text-decoration: none;
     color: #5BA3EF;
     font-weight: bold; }
     #nav #registration:hover {
+      border-radius: 0.25em;
       color: #000000;
       background-color: #5BA3EF; }
+  #nav .navbar-nav a {
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+    font-weight: 500; }
+    #nav .navbar-nav a:hover {
+      border-radius: 0.25em;
+      color: #1C2125;
+      background-color: #ffffff;
+      font-weight: 700; }
   #nav img {
     position: absolute;
     left: 0px;
@@ -2248,8 +2335,6 @@ figure.effect-moses:hover img {
         -webkit-transition: font-size 0.2s ease;
         -ms-transition: font-size 0.2s ease;
         transition: font-size 0.2s ease;
-        display: inline-block;
-        padding: 0 10px;
         border: 0;
         border-radius: 8px;
         color: #ffffff; }
@@ -2273,7 +2358,11 @@ figure.effect-moses:hover img {
       margin: -0.4em .5em; }
       #nav.alt ul li a {
         font-size: .8em; }
-  @media screen and (max-width: 736px) {
+  @media screen and (max-width: 480px) {
+    #nav .navbar-nav a {
+      background-color: rgba(28, 33, 37, 0.9); }
+    #nav .active {
+      text-decoration: none; }
     #nav + #main {
       padding-top: 0; } }
 
@@ -2281,7 +2370,8 @@ figure.effect-moses:hover img {
 #main {
   background-color: #ffffff;
   color: #636363;
-  border-radius: 0.25em; }
+  border-radius: 0.25em;
+  background-color: rgba(28, 33, 37, 0.9); }
   #main input, #main select, #main textarea {
     color: #636363; }
   #main a:hover {
@@ -2490,18 +2580,22 @@ figure.effect-moses:hover img {
   flex-wrap: wrap;
   padding: 5em 5em 3em 5em ;
   width: calc(100% + 2em);
-  margin: 0 0 3em -2em; }
+  margin: 0 0 3em -4em; }
   #footer .column {
-    width: calc(30% - 2em); }
+    width: calc(35% - 2em); }
   #footer > * {
     margin-left: 2em; }
     #footer > * a:hover {
       text-decoration: none; }
+  #footer img {
+    width: 150px; }
   #footer .copyright {
     width: 100%;
     margin: 2.5em 0 2em 0;
-    font-size: 0.8em;
+    font-size: 1em;
     text-align: center; }
+    #footer .copyright a {
+      color: #8cc9f0; }
   @media screen and (max-width: 1280px) {
     #footer {
       padding: 4em 4em 2em 4em ; } }
@@ -2519,13 +2613,20 @@ figure.effect-moses:hover img {
         text-align: left; } }
   @media screen and (max-width: 736px) {
     #footer {
-      padding: 3em 2em 1em 2em ; } }
+      padding: 3em 2em 1em 2em ; }
+      #footer .column {
+        width: calc(90% - 2em); }
+      #footer img {
+        width: 49%;
+        height: auto; } }
   @media screen and (max-width: 480px) {
     #footer {
-      padding: 3em 1.5em 1em 1.5em ; } }
-  @media screen and (max-width: 480px) {
-    #footer {
-      padding: 2.5em 1em 0.5em 1em ; } }
+      padding: 3em 1.5em 1em 1.5em ; }
+      #footer .copyright {
+        text-align: center;
+        font-size: 1.25em; }
+        #footer .copyright a {
+          color: #8cc9f0; } }
 
 /* Wrapper */
 #wrapper {

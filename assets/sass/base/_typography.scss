@@ -1,9 +1,6 @@
 /* Type */
 
 	body {
-		background-color: _palette(bg);
-		color: _palette(fg-bold);
-
 	}
 
 	body, input, select, textarea {
@@ -31,11 +28,11 @@
 			'border-bottom #{_duration(transition)} ease'
 		));
 		text-decoration: none;
-		border-bottom: dotted 1px;
-		color: inherit;
+		color: _palette(fg-bold);
 
 		&:hover {
 			border-bottom-color: transparent;
+			border-bottom: 1px dotted _palette(fg-bold);
 		}
 	}
 
@@ -122,12 +119,17 @@
 		top: -0.5em;
 	}
 
-	blockquote {
-		border-left: solid 4px;
-		font-style: italic;
-		margin: 0 0 _size(element-margin) 0;
-		padding: (_size(element-margin) / 4) 0 (_size(element-margin) / 4) _size(element-margin);
-	}
+	// blockquote {
+	// 	border-left: solid 4px;
+	// 	font-style: italic;
+	// 	font-size: 2em;
+	// 	margin: 0 0 _size(element-margin) 0;
+	// 	padding: (_size(element-margin) / 4) 0 (_size(element-margin) / 4) _size(element-margin);
+	// 	font-family: Raleway;
+	// 	color: _palette(bg);
+	// }
+
+	//MOVED TO _story
 
 	code {
 		border-radius: _size(border-radius);

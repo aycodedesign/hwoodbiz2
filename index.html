@@ -10,55 +10,77 @@
 	 crossorigin="anonymous">
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
-	
-
 	<link rel="icon" href="./images/icons/hblogo.png">
 	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
 
 <body class="is-preload">
-
+	
 	<!-- Wrapper -->
-	<div id="wrapper">
-
-		<!-- Header -->
-		<header id="header" class="alt">
-			<!-- <span class="logo"><img src="images/logo.svg" alt="" /></span> -->
-			<h1>Hollywood Biz 2018</h1>
-			<h2>take your dance career to the next level</h2>
-			<br/> contact Bryan Clawson
+	<div class="hero-image alt" id="header top">
+		<h1>HOLLYWOOD</h1>
+		<h1 id="biz">BIZ</h1>
+		<h2>take your dance career to the next level</h2>
+		<iframe width="700" height="394" src="https://www.youtube.com/embed/RYb3iczxNJg?start=133" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		<p>
+			Contact Bryan Clawson
 			<a href="mailto:hollywoodbiz15@gmail.com">hollywoodbiz15@gmail.com</a>.
-		</header>
+		</p>
+	</div>
 
-		<!-- Nav -->
-		<nav>
-			<div id="nav">
-			<ul>
-				<li><a href="#top"><img src="./images/hwoodbiz.jpg" alt="Hollywood Biz logo"></a></li>
-				<li><a href="#story">STORY</a></li>
-				<li><a href="#staff">STAFF</a></li>
-				<li><a href="#videos">VIDEOS</a></li>
-				<li><a href="#auditions">AUDITIONS</a></li>
+	<div id="wrapper">
+		
+<!--Navbar-->
+<nav id="nav" class="navbar navbar-expand-lg navbar-dark primary-color">
 
-				<li><a id="registration" href="./audition-dates.pdf" target="_blank">REGISTRATION</a>
-				</li>
-			</ul>
-</div>
-		</nav>
+	<!-- Navbar brand -->
+	<a href="#top"><img src="./images/hwoodbiz.jpg" alt="Hollywood Biz logo"></a>
+
+	<!-- Collapse button -->
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
+	 aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<!-- Collapsible content -->
+	<div class="collapse navbar-collapse" id="basicExampleNav">
+
+		<!-- Links -->
+		<div class="navbar-nav mx-auto">
+				<a class="nav-link nav-item" data-toggle="collapse" data-target=".navbar-collapse.show" href="#story">STORY
+					<span class="sr-only">(current)</span>
+				</a>
+				<a class="nav-link nav-item" data-toggle="collapse" data-target=".navbar-collapse.show" href="#staff">STAFF</a>
+				<a class="nav-link nav-item" data-toggle="collapse" data-target=".navbar-collapse.show" href="#videos">VIDEOS</a>
+				<a class="nav-link nav-item" data-toggle="collapse" data-target=".navbar-collapse.show" href="#auditions">AUDITIONS</a>
+				<a class="nav-link nav-item" data-target=".navbar-collapse.show" id="registration" href="./audition-dates.pdf" target="_blank">
+					REGISTRATION FORM
+				</a>
+		</div>
+	</div>
+		<!-- Links -->
+</nav>
+<!--/.Navbar-->
 
 		<!-- Main -->
 		<div id="main">
 
 		<!-- Introduction -->
-		<section id="story" class="main">
+		<section id="story" class="main special">
+			<header class="major">
+				<h2>STORY</h2>
+			</header>
 
 			<div class="spotlight">
 				<div class="content">
-					<header class="major">
-						<h2>Ipsum sed adipiscing</h2>
-					</header>
-					<p>Sed lorem ipsum dolor sit amet nullam consequat feugiat consequat magna adipiscing magna etiam amet veroeros. Lorem
-						ipsum dolor tempus sit cursus. Tempus nisl et nullam lorem ipsum dolor sit amet aliquam.</p>
+					<blockquote>
+						<span id="leftquote">"</span>
+							My goal is to share my <b>knowledge & experience</b> with others. <br>
+						<span id="rightquote">"</span>
+					</blockquote>
+					<p>About 15 years ago, I brought my son Alec B. Clawson to Los Angeles to learn the entertainment business. Since then, he has learned, developed and taught choreography and has worked with <b>Jennifer Lopez, Justin Bieber, will.i.am and the Black Eyed Peas</b>, and has credits on the <b>Emmy and Billboard Music Awards and Disney's "Shake It Up"</b> among others.  He is currently dancing in Cirque du Soleil's <b>"Michael Jackson: ONE"</b> in Las Vegas, NV. He also continues to choreograph for Carnival Choreographer's Ball and mentor dancers new to the industry, especially through <span id="hbiz">HOLLYWOOD BIZ.</span> <br><br>
+					 This program is for the serious, well-rounded dancer looking to pursue a professional career in the entertainment industry in LA. At the end of the program, not only will you perform at <b>Carnival Choreographer’s Ball</b>, but will also have a private audition with <b>Go2Talent</b>.
+					</p>
 				</div>
 			</div>
 		</section>
@@ -161,7 +183,7 @@
 							<h2>
 								2018
 							</h2>
-							<p>"GREED"</p>
+							<p>"LAYERS"</p>
 							<a data-fancybox="gallery" href="https://www.youtube.com/watch?v=RYb3iczxNJg" preload="auto">
 							</a>
 						</figcaption>
@@ -174,8 +196,7 @@
 								2016
 							</h2>
 							<p>"Heartbreak Hotel"</p>
-							<a data-fancybox="gallery" href="https://www.youtube.com/watch?v=J4g8wwGiLMA" preload="auto">
-							</a>
+								<a data-fancybox href="https://www.youtube.com/embed/Wi-T-EltzTM"></a>
 						</figcaption>
 					</figure>
 			
@@ -186,22 +207,11 @@
 								2015
 							</h2>
 							<p>DANCE TITLE</p>
-							<a data-fancybox="gallery" href="https://www.youtube.com/watch?v=3KTygrbOfCg" preload="auto">
+								<a data-fancybox href="https://www.youtube.com/embed/Zki6U426vY8"></a>
 							</a>
 						</figcaption>
 					</figure>
 			
-					<!-- <figure class="effect-moses">
-						<img src="./images/2018-cover.png" alt="Hollywood Biz - 2014">
-						<figcaption>
-							<h2>
-								2014
-							</h2>
-							<p>DANCE TITLE</p>
-							<a data-fancybox="gallery" href="https://www.youtube.com/watch?v=vZWyAKgWsBE" preload="auto">
-							</a>
-						</figcaption>
-					</figure> -->
 				</div>
 			</div>
 		</section>
@@ -213,16 +223,18 @@
 			</header>
 
 			<div class="spotlight">
+				
 				<div class="card">
-					<img class="card-img-top" src="./images/auditions/dogtown.jpg" alt="Dogtown Dance Theatre">
-					<h4>Dogtown Dance Theatre <br>September 15</h4>
+					<img class="card-img-top" src="./images/auditions/fortlauderdale.jpg" alt="TBD">
+					<h4>FORT LAUDERDALE <br>LOCATION TBD <br>October 21</h4>
 					<div class="card-body">
-						<p>109 W.15th Street <br>Richmond VA 23224 <br>
-						<p class="schedule">4pm - Registration <br>4:45 - Seminar <br>5:45 - Dance Audition <br>6:45-7 - Announcement of Recipients</p>
-						<a href="https://goo.gl/maps/tDubpwgpSEJ2" target="_blank" class="btn btn-primary">Google Maps</a>
+						<!-- <p>109 W.15th Street <br>Richmond VA 23224 <br>
+						<p class="schedule">4pm - Registration <br>4:45 - Seminar <br>5:45 - Dance Audition <br>6:45-7 - Announcement of Recipients</p> -->
+						<p><br><br><br><br><br></p>
+						<a href="#" target="_blank" class="btn btn-primary">Google Maps</a>
 					</div>
 				</div>
-
+				
 				<div class="card">
 					<img class="card-img-top" src="./images/auditions/movement.jpg" alt="Movement Studios">
 					<h4>The Movement Studios <br>September 22</h4>
@@ -234,15 +246,15 @@
 				</div>
 
 				<div class="card">
-					<img class="card-img-top" src="./images/auditions/fortlauderdale.jpg" alt="TBD">
-					<h4>FORT LAUDERDALE <br>LOCATION TBD <br>October 21</h4>
+					<img class="card-img-top" src="./images/auditions/dogtown.jpg" alt="Dogtown Dance Theatre">
+					<h4>Dogtown Dance Theatre <br>September 15</h4>
 					<div class="card-body">
-						<!-- <p>109 W.15th Street <br>Richmond VA 23224 <br>
-						<p class="schedule">4pm - Registration <br>4:45 - Seminar <br>5:45 - Dance Audition <br>6:45-7 - Announcement of Recipients</p> -->
-						<p><br><br><br><br><br></p>
-						<a href="#" target="_blank" class="btn btn-primary">Google Maps</a>
+						<p>109 W.15th Street <br>Richmond VA 23224 <br>
+						<p class="schedule">4pm - Registration <br>4:45 - Seminar <br>5:45 - Dance Audition <br>6:45-7 - Announcement of Recipients</p>
+						<a href="https://goo.gl/maps/tDubpwgpSEJ2" target="_blank" class="btn btn-primary">Google Maps</a>
 					</div>
 				</div>
+
 			</div>
 
 		</section>
@@ -251,16 +263,6 @@
 		<!-- Footer -->
 		<footer id="footer">
 			<div class="column">
-				<h2>thanks to our sponsors:</h2>
-				<img width="150px" src="./images/sponsors/a_gproductions.png" alt="A&GProductions">
-				<img width="150px" height="auto" src="./images/sponsors/capitol.jpg" alt="Capitol Movement">
-				<img width="150px" src="./images/sponsors/carnival.jpg" alt="Carnival">
-				<img width="150px" src="./images/sponsors/extendedstay.jpg" alt="Extended Stay">
-				<img width="150px" src="./images/sponsors/sweetjems.PNG" alt="sweetjems">
-				<img width="150px" src="./images/sponsors/millenium.png" alt="Millenium Dance Studio">
-				<img width="150px" src="./images/sponsors/go2talent.png" alt="Go2Talent">
-			</div>
-			<div>
 				<h2>get in touch with bryan:</h2>
 				<dl class="alt">
 					<dt>phone</dt>
@@ -269,10 +271,22 @@
 					<dd><a href="mailto:hollywoodbiz15@gmail.com">hollywoodbiz15@gmail.com</a></dd>
 				</dl>
 				<ul class="icons">
-					<li><a href="https://www.facebook.com/bryan.clawson.779" class="icon fa-facebook alt"><span class="label">Facebook</span></a></li>
+					<li><a href="https://www.facebook.com/bryan.clawson.779" target="_blank" class="icon fa-facebook alt"><span class="label">Facebook</span></a></li>
 					<li><a href="#" class="icon fa-instagram alt"><span class="label">Instagram</span></a></li>
 				</ul>
 			</div>
+
+			<div class="column">
+				<h2>thanks to our sponsors:</h2>
+				<img src="./images/sponsors/a_gproductions.png" alt="A&GProductions">
+				<img height="auto" src="./images/sponsors/capitol.png" alt="Capitol Movement">
+				<img src="./images/sponsors/carnival.png" alt="Carnival">
+				<img src="./images/sponsors/extendedstay.png" alt="Extended Stay">
+				<img src="./images/sponsors/sweetjems.PNG" alt="sweetjems">
+				<img src="./images/sponsors/millenium.png" alt="Millenium Dance Studio">
+				<img src="./images/sponsors/go2talent.png" alt="Go2Talent">
+			</div>
+
 			<p class="copyright">&copy; 2018 -- coded by <a href="https://ay-digitaldesign.netlify.com">&lt;ayDigitalDesign&gt;</a>.</p>
 		</footer>
 	</div>
@@ -282,6 +296,8 @@
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrollex.min.js"></script>
 	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 	<script src="assets/js/browser.min.js"></script>
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>

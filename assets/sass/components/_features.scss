@@ -23,8 +23,12 @@
 
 			&:nth-child(1),
 			&:nth-child(2),
-			&:nth-child(3) {
-				margin-top: 0;
+			&:nth-child(3), 
+			&:nth-child(4),
+			&:nth-child(5)
+			&:nth-child(6)
+			{
+				// margin-top: 0;
 			}
 
 			> :last-child {
@@ -42,19 +46,33 @@
 			}
 		}
 
-		@include breakpoint('<=small') {
+		@include breakpoint('<=xsmall') {
 			width: 100%;
 			margin: 0 0 _size(element-margin) 0;
 
 			li {
 				width: 100%;
-				margin-left: 0;
+				margin: 0 auto;
 				margin-top: _size(element-margin);
+				// border: solid 1px white;
 
+				&:nth-child(1),
 				&:nth-child(2),
-				&:nth-child(3) {
-					margin-top: _size(element-margin);
+				&:nth-child(3),
+				&:nth-child(4),
+				&:nth-child(5),
+				&:nth-child(6)
+				{
+					// margin-top: _size(element-margin);
+									padding: 2em .25em;
+
 				}
 			}
+
+			a {
+				display: grid;
+				align-items: center;
+			}
+			
 		}
 	}

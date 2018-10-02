@@ -27,15 +27,15 @@ This is the starting grid for each video with thumbnails 4 across for the larges
 It's important to use percentages or there may be gaps on the right side of the page. 
 */
 
-.video {
-  background: #fff;
-  padding-bottom: 20px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-  width: 23%;
-  /* Thumbnails 4 across */
-  margin: 1%;
-  float: left;
-}
+// .video {
+//   background: #fff;
+//   padding-bottom: 20px;
+//   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+//   width: 23%;
+//   /* Thumbnails 4 across */
+//   margin: 1%;
+//   float: left;
+// }
 
 /* 
  These keep the height of each video thumbnail consistent between YouTube and Vimeo.
@@ -92,7 +92,7 @@ It's important to use percentages or there may be gaps on the right side of the 
     position: relative;
     float: left;
     overflow: hidden;
-    margin: 0px 1% 50px;
+    margin: 15px 10px;
     min-width: 320px;
     max-width: 480px;
     max-height: 360px;
@@ -205,5 +205,13 @@ figure.effect-moses {
     img {
       opacity: 0.5;
     }
+  }
+}
+
+@include breakpoint('<=xsmall') {
+  .grid {
+  figure {
+    margin: 25px auto;
+  }
   }
 }

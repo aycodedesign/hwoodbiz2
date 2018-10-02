@@ -9,8 +9,8 @@
     large: ["981px", "1280px"],
     medium: ["737px", "980px"],
     small: ["481px", "736px"],
-    xsmall: ["361px", "480px"],
-    xxsmall: [null, "360px"]
+    xsmall: [null, "480px"],
+    // xxsmall: [null, "360px"]
   });
 
   // Play initial animations on page load.
@@ -40,7 +40,7 @@
 
     $nav_a
       .scrolly({
-        speed: 1000,
+        speed: 800,
         offset: function() {
           return $nav.height();
         }
@@ -95,3 +95,10 @@
     speed: 1000
   });
 })(jQuery);
+
+
+//Navigation
+
+// $(".navbar-nav>li>a").on("click", function() {
+//   $(".navbar-collapse").collapse("hide");
+// });
